@@ -1,3 +1,9 @@
+import styles from './Header.module.css';
+
 export function Header() {
-    return <h1>"HEADER"</h1>
+    return (
+        <header className={styles.header}>
+            <img src="/logo.svg" alt="todo" />
+        </header>
+    )
 }
