@@ -1,0 +1,161 @@
+.taskList {
+    display: grid;
+    justify-items: center;
+}
+
+.taskList header{
+    display: flex;
+    gap: 8px;
+    height: 54px;
+    position: relative;
+    top: -50%;
+    max-width: 90vw;
+}
+
+.taskList header input {
+    width: 638px;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--gray-100)
+}
+
+.taskList header button {
+    width: 90px;
+    background: var(--blueDark);
+    color: var(--gray-100);
+    border: 0;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.taskList header button svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+.taskList main {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+
+.taskList main > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 37px 0 24px 0;
+}
+
+.taskList main div div {
+    gap: 8px
+}
+
+.taskList main div div strong {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--gray-400);
+}
+
+.taskList main div div:first-child span{
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.taskList main div div:last-child span{
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.taskList main *{
+    display: flex;
+    max-width: 90vw;
+    
+}
+
+.taskList main ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.taskList main ul li{
+    background: var(--gray-500);
+    height: 72px;
+    width: 736px;
+    max-width: 90vw; 
+    border-radius: 8px;
+    gap: 12px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.taskList main ul li div{
+    gap: 12px;
+    align-items: center;
+    margin: 16px;
+}
+
+.taskList main input[type=checkbox]{
+    all: unset;
+    border: 2px solid var(--blue);
+    border-radius: 999px;
+    width: 17.45px;
+    height: 17.45px;
+    display: inline-block;
+    
+}
+/* .taskList main input[type=checkbox] ~ svg{
+    visibility: hidden;
+    position: relative;
+    margin: 2.5px;
+    
+} */
+.taskList main input[type=checkbox]:checked{
+    background-color: var(--purple);
+    border: 2px solid var(--purple);
+    width: 17.45px;
+    height: 17.45px;
+    transition: .1s;
+    
+}
+/* .taskList main input[type=checkbox]:checked ~ svg{
+    visibility: visible;
+    color: var(--gray-100)
+} */
+
+
+.taskList main ul li p{
+    width: 632px;
+    display: flex;
+    align-content: center;
+
+}
+.taskList main ul li button{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    height: 24px;
+}
+
+.taskList main ul li button svg{
+    color: var(--gray-300);
+    cursor: pointer;
+}
+.taskList main ul li button svg:hover{
+    color: var(--Danger);
+}
+
