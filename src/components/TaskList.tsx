@@ -1,7 +1,6 @@
 import { PlusCircle, Trash, Check  } from 'phosphor-react'
 import { useState, useEffect } from 'react';
 
-
 import styles from './TaskList.module.css';
 
 export function TaskList() {

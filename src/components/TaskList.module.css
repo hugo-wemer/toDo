@@ -114,11 +114,14 @@
 
 .taskList main ul li p{
     width: 632px;
+    max-width: 100vw;
+    /* height: 40px; */
     display: flex;
-    align-content: center;
+    align-items: center;
     cursor: default;
-}
 
+    word-break: break-all;
+}
 
 .taskList main ul li button{
     display: flex;
@@ -138,3 +141,8 @@
     color: var(--Danger);
 }
 
+ .taskList main ul li div[class=completed]{
+    text-decoration: line-through;
+    color: var(--gray-300);
+    
+}
