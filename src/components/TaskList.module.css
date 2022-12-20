@@ -115,11 +115,9 @@
 .taskList main ul li p{
     width: 632px;
     max-width: 100vw;
-    /* height: 40px; */
     display: flex;
     align-items: center;
     cursor: default;
-
     word-break: break-all;
 }
 
@@ -145,4 +143,36 @@
     text-decoration: line-through;
     color: var(--gray-300);
     
+}
+
+ .taskList main ul > div{
+    display: none;
+    visibility: hidden;
+    width: 736px;
+    height: 244px;
+    border: 1px var(--gray-400);
+    border-style: solid hidden hidden;
+    border-radius: 8px;
+    padding: 64px 0;
+}
+
+ .taskList main ul[class=nullList] div{
+    display: block;
+    visibility: visible;
+}
+
+ .taskList main ul > div svg{
+    width: 56px;
+    height: 56px;
+    color: #3D3D3D;
+    margin-bottom: 1rem;
+}
+
+ .taskList main ul[class=nullList] div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+ .taskList main ul[class=nullList] div:not(svg){
+    color:var(--gray-300);
 }

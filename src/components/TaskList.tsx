@@ -1,4 +1,4 @@
-import { PlusCircle, Trash, Check  } from 'phosphor-react'
+import { PlusCircle, Trash, Check, ClipboardText  } from 'phosphor-react'
 import { useState, useEffect } from 'react';
 
 import styles from './TaskList.module.css';
@@ -82,30 +82,34 @@ export function TaskList() {
                         <strong>{numberOfCompletedTasks} de {numberOfTasks}</strong>
                     </div>
                 </div>
-                <ul>
-                    {tasks.map(task => (
+                <ul className={numberOfTasks == 0 ? 'nullList' : ''}>
+                    <div>
+                        <ClipboardText weight="thin"/>
+                        <strong>Você ainda não tem tarefas cadastradas</strong>
+                        <p>Crie tarefas e organize seus itens a fazer</p>
+                    </div>
+                        {tasks.map(task => (
                             <li key={task.id}>
-                            <div className={task.isComplete ?  'completed' : ''}>
-                                <label>
-                                    <input 
-                                        type="checkbox"
-                                        readOnly
-                                        checked={task.isComplete}
-                                        onClick={()=> handleToggleTaskCompletion(task.id)}
-                                    />
-                                    <span> {/*<Check />*/} </span>
-                                </label>
-                                <p>{task.description}</p>
-                                <button
-                                    type='button'
-                                    onClick={() => handleRemoveTask(task.id)}    
-                                >
-                                    <Trash />
-                                </button>
-                            </div>
-                        </li>
-                    ))}
-                    
+                                <div className={task.isComplete ?  'completed' : ''}>
+                                    <label>
+                                        <input 
+                                            type="checkbox"
+                                            readOnly
+                                            checked={task.isComplete}
+                                            onClick={()=> handleToggleTaskCompletion(task.id)}
+                                        />
+                                        <span> {/*<Check />*/} </span>
+                                    </label>
+                                    <p>{task.description}</p>
+                                    <button
+                                        type='button'
+                                        onClick={() => handleRemoveTask(task.id)}    
+                                    >
+                                        <Trash />
+                                    </button>
+                                </div>
+                            </li>
+                        ))}
                 </ul>
             </main>
         </section>
