@@ -36,10 +36,9 @@ export function TaskList() {
                             <label>
                                 <input 
                                     type="checkbox"
-                                    readOnly
+                                    // readOnly
                                 />
-                                {/* <Check /> */}
-                                <span></span>
+                                <span> {/*<Check />*/} </span>
                             </label>
                             <p>Hello World!</p>
                             <button
