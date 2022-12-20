@@ -50,7 +50,7 @@
 }
 
 .taskList main > div{
-    width: 100%;
+    width: 736px;
     display: flex;
     justify-content: space-between;
     margin: 37px 0 24px 0;
@@ -61,19 +61,23 @@
 }
 
 .taskList main div div strong {
-    padding: 2px 8px;
+    padding: 1px 8px;
     border-radius: 999px;
     background: var(--gray-400);
+    height: 19px;
 }
 
+.taskList main div div span{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
 .taskList main div div:first-child span{
     color: var(--blue);
-    font-weight: bold;
 }
 
 .taskList main div div:last-child span{
     color: var(--purple);
-    font-weight: bold;
 }
 
 .taskList main *{
